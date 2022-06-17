@@ -34,8 +34,32 @@ const teamMembers = [
     {
         name: 'Barbara Ramost',
         job: 'Graphic Designer',
-        image: 'wayne-barnett-founder-ceo'
+        image: 'barbara-ramos-graphic-designer'
     }
 ];
 
-console.log(teamMembers);
+const teamContainer = document.querySelector('.team-container');
+
+// Per ogni team-member nell'array stampo una card (appendo single-member template a team-container)
+for(let i = 0; i < teamMembers.length; i++) {
+    const singleMember = teamMembers[i];
+
+    // Creazione di un nuovo template compilato coi dati giusti
+    const teamToDraw = `
+    <div class="team-card">
+        <div class="card-image">
+            <img
+                src="img/${singleMember.image}.jpg"
+                alt="Wayne Barnett"
+            />
+        </div>
+        <div class="card-text">
+            <h3>${singleMember.name}</h3>
+            <p>${singleMember.job}</p>
+        </div>
+    </div>
+    `;
+
+    // Concatenare il template a teamContainer
+    teamContainer.innerHTML += teamToDraw;
+}
