@@ -37,3 +37,5 @@ const teamMembers = [
         image: 'wayne-barnett-founder-ceo'
     }
 ];
+
+console.log(teamMembers);
