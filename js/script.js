@@ -45,7 +45,7 @@ for(let i = 0; i < teamMembers.length; i++) {
     const singleMember = teamMembers[i];
 
     // Creazione di un nuovo template compilato coi dati giusti
-    const teamToDraw = `
+    const memberToDraw = `
     <div class="team-card">
         <div class="card-image">
             <img
@@ -61,5 +61,5 @@ for(let i = 0; i < teamMembers.length; i++) {
     `;
 
     // Concatenare il template a teamContainer
-    teamContainer.innerHTML += teamToDraw;
+    teamContainer.innerHTML += memberToDraw;
 }
